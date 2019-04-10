@@ -5,9 +5,7 @@ body {
 	background-image:url(../images/xkbj.jpg) ;
 	text-align:left;
 }
-html{
-	font-size: (16/3.75) vw;
-}
+
 /* Global Structure ============================================================= */
 /* Header */
 #header{
