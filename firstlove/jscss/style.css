@@ -1,8 +1,8 @@
 
 /* Global properties ======================================================== */
 body { 
-	background:#6f599c;
-	background-image:url(../images/bg.jpg) ;
+	background:blue;
+	background-image:url(../images/xkbj.jpg) ;
 	text-align:left;
 }
 
@@ -132,5 +132,11 @@ img {
 	top:-50px;
 	overflow:hidden;
 }
+
+#div{width:100%;overflow:hidden;position:relative;height:100%;z-index:-1;}
+#div>div{z-index:-1;width:4px;height:4px;background:#cccccc;position:absolute;top:0px;right:0px;border-radius:100%}
+#div>div>div{z-index:-1;width:3px;height:3px;background:#ccc;position:absolute;top:-2px;right:-2px;}
+#div>div>div>div{z-index:-1;width:2px;height:2px;background:#ccc;position:absolute;top:-2px;right:-2px;}
+#div>div>div>div div{z-index:-1;width:1px;height:1px;background:#ccc;position:absolute;top:-1px;right:-1px;}
 
 

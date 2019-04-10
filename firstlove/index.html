@@ -10,15 +10,15 @@
 		<script type="text/javascript" src="./jscss/roundabout.js"></script>
 		<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
 		<script type="text/javascript" src="./jscss/gallery_init.js"></script>
-		<link href="css/css.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="css/css.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/js.js"></script> -->
 		<!-- 下雪-->
 		<!-- <script type="text/javascript" src="./jscss/snowstorm.js"></script> -->
 		<!-- 打字机效果-->		
 		<script type="text/javascript" src="./jscss/text.js"></script>
 		<!-- 画爱心-->
-<!-- 		<script type="text/javascript" src="./jscss/ga.js" async=""></script>
+ 		<!-- <script type="text/javascript" src="./jscss/ga.js" async=""></script>
 		<script type="text/javascript" src="./jscss/heart.js"></script> -->
 		<!-- 移动div-->
 		<script type="text/javascript" src="./jscss/move.js"></script>
@@ -27,7 +27,7 @@
 		<!-- 设置文字跟随鼠标 -->
 		<script type="text/javascript" src="./jscss/makesnake.js"></script></head>
 		<body>
-		<div class="div"></div>
+		<div id="div" style="float:right;"></div>
 		<!-- thanks for watching! -->
 		<span id="span0" class="spanstyle">T</span><span id="span1" class="spanstyle">h</span>
 		<span id="span2" class="spanstyle">a</span><span id="span3" class="spanstyle">n</span>
@@ -102,6 +102,34 @@
 			</script>
 		</div>
 
-	
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var Timerr;
+				function aa(){
+					for(var i=0;i<4;i++){
+					var m=parseInt(Math.random()*700+100);
+					var j2=parseInt(Math.random()*300+1200);
+					var j=parseInt(Math.random()*1600+000);
+					var j1=parseInt(Math.random()*300+300);
+					var n=parseInt(Math.random()*10+(-10));
+					$('#div').prepend('<div><div><div><div><div></div></div></div></div></div>')
+					$('#div').children('div').eq(0).css({'left':j,'top':n})
+					$('#div').children('div').eq(0).animate({'left':j-j1,'top':$(window).height()+20},j2)
+					
+					}
+					}
+					aa();
+					var star = setInterval(function(){
+						aa();
+						},300)
+						var starsec = setInterval(function(){
+							for(var jj=0;jj<$('#div>div').size()/4;jj++){
+							$('#div>div').eq($('#div>div').size()-jj).remove();
+							}
+							
+							},1000)
+				
+			})
+		</script>
 	
 </body>
